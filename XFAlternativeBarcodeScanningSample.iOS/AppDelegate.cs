@@ -25,6 +25,10 @@ namespace XFAlternativeBarcodeScanningSample.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            GoogleVisionBarCodeScanner.iOS.Initializer.Init();
+            Firebase.Core.App.Configure();
+            _ = Firebase.RemoteConfig.RemoteConfig.SharedInstance;
+
             return base.FinishedLaunching(app, options);
         }
     }

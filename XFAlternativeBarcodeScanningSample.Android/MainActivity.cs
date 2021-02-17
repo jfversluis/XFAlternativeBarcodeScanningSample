@@ -13,6 +13,8 @@ namespace XFAlternativeBarcodeScanningSample.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            
+            GoogleVisionBarCodeScanner.Droid.RendererInitializer.Init();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
